@@ -64,18 +64,3 @@ void (*get_op_func(char *s))(stack_t **stack, unsigned int line_number)
 	}
 	return ((ops + i)->f);
 }
-
-void push(stack_t **stack, unsigned int line_number)
-{
-	(void) stack;
-	(void) line_number;
-	printf("push\n");
-}
-
-
-void done(stack_t **stack, unsigned int line_number)
-{
-	(void) stack;
-	(void) line_number;
-	printf("push\n");
-}

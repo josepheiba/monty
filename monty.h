@@ -1,11 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define _GNU_SOURCE
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -25,7 +25,7 @@ typedef struct stack_s
 
 /**
  * struct instruction_s - opcode and its function
- * @opcode: the opcode
+ * @opcode: the opcoe
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
