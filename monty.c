@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 	{
 		tokenize_and_continue(line, &books);
 	}
+	return (0);
 }
 
 /**
@@ -34,11 +35,10 @@ void tokenize_and_continue(char *line, stack_t **books)
 {
 	char *token1;
 	char *token2;
-	(void) token2;
 
 	token1 = strtok(line, " \n");
 	token2 = strtok(NULL, " \n");
-	get_op_func(token1)(books, 10);
+	get_op_func(token1)(books, atoi(token2));
 }
 
 /**
