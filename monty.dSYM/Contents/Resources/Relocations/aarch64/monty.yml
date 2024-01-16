@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     monty
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _argc_not_valid, symObjAddr: 0x0, symBinAddr: 0x100003C7C, symSize: 0x3C }
+  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _argc_not_valid, symObjAddr: 0x0, symBinAddr: 0x100003C7C, symSize: 0x3C }
+  - { offsetInCU: 0x26, offset: 0x88, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CB8, symSize: 0xB4 }
+  - { offsetInCU: 0x41, offset: 0xA3, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CB8, symSize: 0xB4 }
+  - { offsetInCU: 0xAF, offset: 0x111, size: 0x8, addend: 0x0, symName: _tokenize_and_continue, symObjAddr: 0xB4, symBinAddr: 0x100003D6C, symSize: 0x60 }
+  - { offsetInCU: 0xFD, offset: 0x15F, size: 0x8, addend: 0x0, symName: _get_op_func, symObjAddr: 0x114, symBinAddr: 0x100003DCC, symSize: 0xE8 }
+  - { offsetInCU: 0x141, offset: 0x1A3, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x1FC, symBinAddr: 0x100003EB4, symSize: 0x2C }
+  - { offsetInCU: 0x26, offset: 0x4B0, size: 0x8, addend: 0x0, symName: _file_open_fail, symObjAddr: 0x0, symBinAddr: 0x100003EE0, symSize: 0x68 }
+  - { offsetInCU: 0x42, offset: 0x4CC, size: 0x8, addend: 0x0, symName: _file_open_fail, symObjAddr: 0x0, symBinAddr: 0x100003EE0, symSize: 0x68 }
+...
