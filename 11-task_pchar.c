@@ -27,3 +27,35 @@ void pchar(stack_tt **stack, unsigned int line_number)
 	character = ch;
 	printf("%c\n", character);
 }
+
+/**
+ * pstr - check code.
+ * @stack : variable
+ * @line_number : variable
+ * Return: check declaration
+ */
+
+void pstr(stack_tt **stack, unsigned int line_number)
+{
+	int stack_len, ch;
+	char character;
+	stack_tt *head;
+
+	(void) line_number;
+	stack_len = dlistint_len(*stack);
+	if (stack_len == 0)
+	{
+		printf("\n");
+	}
+	else
+	{
+		head = *stack;
+		ch = (head)->n;
+		while ((ch < 32 || ch > 126) && ch != 0 && head != NULL)
+		{
+			character = ch;
+			printf("%c\n", character);
+			head = head->next;
+		}
+	}
+}
