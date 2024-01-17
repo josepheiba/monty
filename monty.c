@@ -25,6 +25,8 @@ int main(int argc, char **argv)
 		ln++;
 	}
 	free(line);
+	free_dlistint(stack);
+	fclose(fd);
 	return (0);
 }
 
