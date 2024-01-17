@@ -55,7 +55,7 @@ void add(stack_tt **stack, unsigned int line_number);
 void sub(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
 void tokenize_and_continue(char *line, stack_tt **books, int ln);
-void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int line_number);
+void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
