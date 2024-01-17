@@ -92,7 +92,7 @@ void rotr(stack_tt **stack, unsigned int line_number)
 	{
 		return;
 	}
-	a = (get_dnodeint_at_index(*stack, stack_len))->n;
-	delete_dnodeint_at_index(stack, stack_len);
+	a = (get_dnodeint_at_index(*stack, stack_len - 1))->n;
+	delete_dnodeint_at_index(stack, stack_len - 1);
 	add_dnodeint(stack, a);
 }
