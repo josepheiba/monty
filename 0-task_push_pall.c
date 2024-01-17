@@ -15,21 +15,21 @@ void push(stack_tt **stack, unsigned int line_number)
 	token2 = strtok(NULL, " \n");
 	if (token2 != NULL)
 	{
-		if(not_int(token2))
+		if (not_int(token2))
 		{
 			dprintf(2, "L%d: usage: push integer\n", line_number);
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 		}
 		else
 		{
 			number = atoi(token2);
-			add_dnodeint(stack, number);		
+			add_dnodeint(stack, number);
 		}
 	}
 	else
 	{
 		dprintf(2, "L%d: usage: push integer\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 }
 

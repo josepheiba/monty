@@ -16,7 +16,7 @@ void pint(stack_tt **stack, unsigned int line_number)
 	if (stack_len == 0)
 	{
 		dprintf(2, "L%d: can't pint, stack empty\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	else
 		printf("%d\n", (*stack)->n);
@@ -37,7 +37,7 @@ void pop(stack_tt **stack, unsigned int line_number)
 	if (stack_len == 0)
 	{
 		dprintf(2, "L%d: can't pop an empty stack\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	else
 		delete_dnodeint_at_index(stack, 0);
@@ -59,7 +59,7 @@ void swap(stack_tt **stack, unsigned int line_number)
 	if (stack_len < 2)
 	{
 		dprintf(2, "L%d: can't swap, stack too short\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	a = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);
@@ -84,7 +84,7 @@ void add(stack_tt **stack, unsigned int line_number)
 	if (stack_len < 2)
 	{
 		dprintf(2, "L%d: can't add, stack too short\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	a = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);
@@ -108,7 +108,7 @@ void sub(stack_tt **stack, unsigned int line_number)
 	if (stack_len < 2)
 	{
 		dprintf(2, "L%d: can't sub, stack too short\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	a = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);

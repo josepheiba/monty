@@ -10,9 +10,6 @@ int argc_not_valid(int argc)
 {
 	if (argc == 2)
 		return (0);
-	else
-	{
-		dprintf(2, "USAGE: monty file\n");
-		exit (EXIT_FAILURE);
-	}
+	dprintf(2, "USAGE: monty file\n");
+	exit(EXIT_FAILURE);
 }

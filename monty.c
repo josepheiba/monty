@@ -29,8 +29,10 @@ int main(int argc, char **argv)
 }
 
 /**
- * get_op_func - check code.
- * @s : variable
+ * tokenize_and_continue - check code.
+ * @line : variable
+ * @stack : variable
+ * @ln : variable
  * Return: check declaration
  */
 
@@ -47,10 +49,12 @@ void tokenize_and_continue(char *line, stack_tt **stack, int ln)
 /**
  * get_op_func - check code.
  * @s : variable
+ * @line_number : variable
  * Return: check declaration
  */
 
-void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int line_number)
+void (*get_op_func(char *s, int ln))(stack_tt **stack,
+			unsigned int line_number)
 {
 	instruction_t ops[] = {
 		{"push", push},
@@ -73,6 +77,6 @@ void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int line_number)
 		i++;
 	}
 	dprintf(2, "L%d: unknown instruction %s\n", ln, s);
-	exit (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 	return ((ops + i)->f);
 }
