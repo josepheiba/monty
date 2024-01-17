@@ -10,6 +10,7 @@
 void pchar(stack_tt **stack, unsigned int line_number)
 {
 	int stack_len, ch;
+	char character;
 
 	stack_len = dlistint_len(*stack);
 	if (stack_len == 0)
@@ -23,5 +24,6 @@ void pchar(stack_tt **stack, unsigned int line_number)
 		dprintf(2, "L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (char)ch);
+	character = ch;
+	printf("%c\n", character);
 }
