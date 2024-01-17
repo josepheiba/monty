@@ -58,6 +58,7 @@ void mul(stack_tt **stack, unsigned int line_number);
 void mod(stack_tt **stack, unsigned int line_number);
 void pchar(stack_tt **stack, unsigned int line_number);
 void pstr(stack_tt **stack, unsigned int line_number);
+void rotl(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
 void tokenize_and_continue(stack_tt **books, int ln);
 void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);
@@ -67,5 +68,8 @@ size_t dlistint_len(const dlistint_t *h);
 stack_tt *add_dnodeint(dlistint_t **head, const int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 void free_dlistint(dlistint_t *head);
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+dlistint_t *find_tail(dlistint_t *head);
 
 #endif

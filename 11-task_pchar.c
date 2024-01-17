@@ -52,3 +52,25 @@ void pstr(stack_tt **stack, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ * rotl - check code.
+ * @stack : variable
+ * @line_number : variable
+ * Return: check declaration
+ */
+
+void rotl(stack_tt **stack, unsigned int line_number)
+{
+	int stack_len, a;
+
+	(void) line_number;
+	stack_len = dlistint_len(*stack);
+	if (stack_len < 2)
+	{
+		return;
+	}
+	a = (get_dnodeint_at_index(*stack, 0))->n;
+	delete_dnodeint_at_index(stack, 0);
+	add_dnodeint_end(stack, a);
+}
