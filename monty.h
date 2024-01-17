@@ -11,7 +11,6 @@
 /**
  * struct VariableGuard - Global variable guard structure
  * @line: Current line
- * @other_variable: Another global variable if needed
  */
 typedef struct VariableGuard
 {
