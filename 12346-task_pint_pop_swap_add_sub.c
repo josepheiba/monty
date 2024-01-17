@@ -90,7 +90,7 @@ void add(stack_tt **stack, unsigned int line_number)
 	delete_dnodeint_at_index(stack, 0);
 	b = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);
-	add_dnodeint(stack, a + b);
+	add_dnodeint(stack, b + a);
 }
 
 /**

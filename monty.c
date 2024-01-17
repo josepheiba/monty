@@ -67,13 +67,14 @@ void (*get_op_func(char *s, int ln))(stack_tt **stack,
 		{"add", add},
 		{"sub", sub},
 		{"div", divv},
+		{"mul", mul},
 		{"nop", nop},
 		{"ok", nop}
 	};
 	int i;
 
 	i = 0;
-	while (i < 9)
+	while (i < 10)
 	{
 		if (!strcmp(s, (ops + i)->opcode))
 			return ((ops + i)->f);
