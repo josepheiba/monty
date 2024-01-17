@@ -54,8 +54,9 @@ void pstr(stack_tt **stack, unsigned int line_number)
 		while ((ch < 32 || ch > 126) && ch != 0 && head != NULL)
 		{
 			character = ch;
-			printf("%c\n", character);
+			printf("%c", character);
 			head = head->next;
 		}
+		printf("\n");
 	}
 }
