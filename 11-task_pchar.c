@@ -37,27 +37,18 @@ void pchar(stack_tt **stack, unsigned int line_number)
 
 void pstr(stack_tt **stack, unsigned int line_number)
 {
-	int stack_len, ch;
+	int ch;
 	char character;
 	stack_tt *head;
 
 	(void) line_number;
-	stack_len = dlistint_len(*stack);
-	if (stack_len == 0)
+	head = *stack;
+	while (head != NULL && head->n != 0 && head->n >= 32 && head->n <= 126)
 	{
-		printf("\n");
-	}
-	else
-	{
-		head = *stack;
 		ch = (head)->n;
-		while (ch >= 32 && ch <= 126 && ch != 0 && head != NULL)
-		{
-			ch = (head)->n;
-			character = ch;
-			printf("%c", character);
-			head = head->next;
-		}
-		printf("\n");
+		character = ch;
+		printf("%c", character);
+		head = head->next;
 	}
+	printf("\n");
 }
