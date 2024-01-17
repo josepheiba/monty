@@ -74,6 +74,13 @@ void mod(stack_tt **stack, unsigned int line_number)
 	}
 	a = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);
+
+	if (a == 0)
+	{
+		dprintf(2, "L%d: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
 	b = (*stack)->n;
 	delete_dnodeint_at_index(stack, 0);
 	add_dnodeint(stack, b % a);
