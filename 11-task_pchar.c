@@ -16,12 +16,16 @@ void pchar(stack_tt **stack, unsigned int line_number)
 	if (stack_len == 0)
 	{
 		dprintf(2, "L%d: can't pint, stack empty\n", line_number);
+		free(line);
+		free_dlistint(*stack);
 		exit(EXIT_FAILURE);
 	}
 	ch = (*stack)->n;
 	if (ch < 32 || ch > 126)
 	{
 		dprintf(2, "L%d: can't pchar, value out of range\n", line_number);
+		free(line);
+		free_dlistint(*stack);
 		exit(EXIT_FAILURE);
 	}
 	character = ch;
