@@ -8,16 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/**
- * struct VariableGuard - Global variable guard structure
- * @line: Current line
- */
-typedef struct VariableGuard
-{
-	char *line;
-} VariableGuard;
-
-extern VariableGuard variable_guard;
+char *line;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -66,7 +57,7 @@ void divv(stack_tt **stack, unsigned int line_number);
 void mul(stack_tt **stack, unsigned int line_number);
 void mod(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
-void tokenize_and_continue(char *line, stack_tt **books, int ln);
+void tokenize_and_continue(stack_tt **books, int ln);
 void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);
 
 size_t print_dlistint(const dlistint_t *h);

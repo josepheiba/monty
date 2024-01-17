@@ -13,18 +13,18 @@ int main(int argc, char **argv)
 	FILE *fd;
 	size_t len = 0;
 	stack_tt *stack = NULL;
-	VariableGuard variable_guard = {NULL};
 
 	ln = 1;
+	line = NULL;
 	argc_not_valid(argc);
 	file_open_fail(&fd, argv[1]);
 
-	while (getline(&variable_guard.line, &len, fd) != -1)
+	while (getline(&line, &len, fd) != -1)
 	{
-		tokenize_and_continue(variable_guard.line, &stack, ln);
+		tokenize_and_continue(&stack, ln);
 		ln++;
 	}
-	free(variable_guard.line);
+	free(line);
 	free_dlistint(stack);
 	fclose(fd);
 	return (0);
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
  * Return: check declaration
  */
 
-void tokenize_and_continue(char *line, stack_tt **stack, int ln)
+void tokenize_and_continue(stack_tt **stack, int ln)
 {
 	char *token1;
 
