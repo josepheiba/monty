@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add - check code.
+ * divv - check code.
  * @stack : variable
  * @line_number : variable
  * Return: check declaration
