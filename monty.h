@@ -8,8 +8,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-char *line;
-
 /**
  * struct VariableGuard - Global variable guard structure
  * @line: Current line
@@ -20,7 +18,7 @@ typedef struct VariableGuard
 	char *line;
 } VariableGuard;
 
-extern char* line;
+extern VariableGuard variable_guard;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
