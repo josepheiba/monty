@@ -8,7 +8,7 @@
  * Return: check declaration
  */
 
-void pint(stack_tt **stack, unsigned int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
 	int stack_len;
 
@@ -29,7 +29,7 @@ void pint(stack_tt **stack, unsigned int line_number)
  * Return: check declaration
  */
 
-void pop(stack_tt **stack, unsigned int line_number)
+void pop(stack_t **stack, unsigned int line_number)
 {
 	int stack_len;
 
@@ -50,7 +50,7 @@ void pop(stack_tt **stack, unsigned int line_number)
  * Return: check declaration
  */
 
-void swap(stack_tt **stack, unsigned int line_number)
+void swap(stack_t **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 
@@ -75,7 +75,7 @@ void swap(stack_tt **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void add(stack_tt **stack, unsigned int line_number)
+void add(stack_t **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 
@@ -99,7 +99,7 @@ void add(stack_tt **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void sub(stack_tt **stack, unsigned int line_number)
+void sub(stack_t **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 

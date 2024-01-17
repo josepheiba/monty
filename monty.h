@@ -19,15 +19,14 @@ char *line;
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-struct stack_s
+typedef struct stack_s
 {
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
-};
+} stack_t;
 
 typedef struct stack_s dlistint_t;
-typedef struct stack_s stack_tt;
 
 /**
  * struct instruction_s - opcode and its function
@@ -40,26 +39,26 @@ typedef struct stack_s stack_tt;
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_tt **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 int not_int(char *s);
 int argc_not_valid(int argc);
 int file_open_fail(FILE **fd, char *argv_one);
-void push(stack_tt **stack, unsigned int line_number);
-void pall(stack_tt **stack, unsigned int line_number);
-void pint(stack_tt **stack, unsigned int line_number);
-void pop(stack_tt **stack, unsigned int line_number);
-void swap(stack_tt **stack, unsigned int line_number);
-void add(stack_tt **stack, unsigned int line_number);
-void sub(stack_tt **stack, unsigned int line_number);
-void nop(stack_tt **stack, unsigned int line_number);
-void tokenize_and_continue(char *line, stack_tt **books, int ln);
-void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void tokenize_and_continue(char *line, stack_t **books, int ln);
+void (*get_op_func(char *s, int ln))(stack_t **stack, unsigned int line_number);
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
-stack_tt *add_dnodeint(dlistint_t **head, const int n);
+stack_t *add_dnodeint(dlistint_t **head, const int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 #endif
