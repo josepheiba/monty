@@ -18,6 +18,8 @@ void push(stack_tt **stack, unsigned int line_number)
 		if (not_int(token2))
 		{
 			dprintf(2, "L%d: usage: push integer\n", line_number);
+			free(line);
+			free_dlistint(*stack);
 			exit(EXIT_FAILURE);
 		}
 		else
