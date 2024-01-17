@@ -56,7 +56,7 @@ void mul(stack_tt **stack, unsigned int line_number)
 }
 
 /**
- * mul - check code.
+ * mod - check code.
  * @stack : variable
  * @line_number : variable
  * Return: check declaration

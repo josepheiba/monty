@@ -32,7 +32,6 @@ int main(int argc, char **argv)
 
 /**
  * tokenize_and_continue - check code.
- * @line : variable
  * @stack : variable
  * @ln : variable
  * Return: check declaration
