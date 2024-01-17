@@ -59,6 +59,7 @@ void mod(stack_tt **stack, unsigned int line_number);
 void pchar(stack_tt **stack, unsigned int line_number);
 void pstr(stack_tt **stack, unsigned int line_number);
 void rotl(stack_tt **stack, unsigned int line_number);
+void rotr(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
 void tokenize_and_continue(stack_tt **books, int ln);
 void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);

@@ -74,3 +74,25 @@ void rotl(stack_tt **stack, unsigned int line_number)
 	delete_dnodeint_at_index(stack, 0);
 	add_dnodeint_end(stack, a);
 }
+
+/**
+ * rotr - check code.
+ * @stack : variable
+ * @line_number : variable
+ * Return: check declaration
+ */
+
+void rotr(stack_tt **stack, unsigned int line_number)
+{
+	int stack_len, a;
+
+	(void) line_number;
+	stack_len = dlistint_len(*stack);
+	if (stack_len < 2)
+	{
+		return;
+	}
+	a = (get_dnodeint_at_index(*stack, stack_len))->n;
+	delete_dnodeint_at_index(stack, stack_len);
+	add_dnodeint(stack, a);
+}
