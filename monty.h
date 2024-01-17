@@ -11,6 +11,18 @@
 char *line;
 
 /**
+ * struct VariableGuard - Global variable guard structure
+ * @line: Current line
+ * @other_variable: Another global variable if needed
+ */
+typedef struct VariableGuard
+{
+	char *line;
+} VariableGuard;
+
+extern char* line;
+
+/**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
