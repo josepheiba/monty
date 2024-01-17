@@ -6,7 +6,7 @@
  * @line_number : variable
  * Return: check declaration
  */
-void divv(stack_t **stack, unsigned int line_number)
+void divv(stack_tt **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 
@@ -37,7 +37,7 @@ void divv(stack_t **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void mul(stack_t **stack, unsigned int line_number)
+void mul(stack_tt **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 
@@ -61,7 +61,7 @@ void mul(stack_t **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void mod(stack_t **stack, unsigned int line_number)
+void mod(stack_tt **stack, unsigned int line_number)
 {
 	int a, b, stack_len;
 

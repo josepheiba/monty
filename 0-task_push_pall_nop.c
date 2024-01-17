@@ -7,7 +7,7 @@
  * @line_number : variable
  * Return: check declaration
  */
-void push(stack_t **stack, unsigned int line_number)
+void push(stack_tt **stack, unsigned int line_number)
 {
 	char *token2;
 	int number;
@@ -39,7 +39,7 @@ void push(stack_t **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void pall(stack_t **stack, unsigned int line_number)
+void pall(stack_tt **stack, unsigned int line_number)
 {
 	(void) line_number;
 	print_dlistint(*stack);
@@ -51,7 +51,7 @@ void pall(stack_t **stack, unsigned int line_number)
  * @line_number : variable
  * Return: check declaration
  */
-void nop(stack_t **stack, unsigned int line_number)
+void nop(stack_tt **stack, unsigned int line_number)
 {
 	(void) stack;
 	(void) line_number;

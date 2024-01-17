@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	int ln;
 	FILE *fd;
 	size_t len = 0;
-	stack_t *stack = NULL;
+	stack_tt *stack = NULL;
 
 	ln = 1;
 	line = NULL;
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
  * Return: check declaration
  */
 
-void tokenize_and_continue(stack_t **stack, int ln)
+void tokenize_and_continue(stack_tt **stack, int ln)
 {
 	char *token1;
 
@@ -55,7 +55,7 @@ void tokenize_and_continue(stack_t **stack, int ln)
  * Return: check declaration
  */
 
-void (*get_op_func(char *s, int ln))(stack_t **stack,
+void (*get_op_func(char *s, int ln))(stack_tt **stack,
 			unsigned int line_number)
 {
 	instruction_t ops[] = {
