@@ -40,7 +40,7 @@ void tokenize_and_continue(char *line, stack_tt **stack, int ln)
 {
 	char *token1;
 
-	token1 = strtok(line, " \n");
+	token1 = strtok(line, " \n\t");
 
 	if (token1 != NULL)
 		get_op_func(token1, ln)(stack, ln);

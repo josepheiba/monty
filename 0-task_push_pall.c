@@ -12,7 +12,7 @@ void push(stack_tt **stack, unsigned int line_number)
 	char *token2;
 	int number;
 
-	token2 = strtok(NULL, " \n");
+	token2 = strtok(NULL, " \n\t");
 	if (token2 != NULL)
 	{
 		if (not_int(token2))
