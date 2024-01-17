@@ -43,7 +43,7 @@ void tokenize_and_continue(stack_tt **stack, int ln)
 
 	token1 = strtok(line, " \n\t");
 
-	if (token1 != NULL)
+	if (token1 != NULL && token1[0] != '#')
 		get_op_func(token1, ln)(stack, ln);
 }
 
