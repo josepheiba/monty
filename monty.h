@@ -53,6 +53,7 @@ void pop(stack_tt **stack, unsigned int line_number);
 void swap(stack_tt **stack, unsigned int line_number);
 void add(stack_tt **stack, unsigned int line_number);
 void sub(stack_tt **stack, unsigned int line_number);
+void divv(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
 void tokenize_and_continue(char *line, stack_tt **books, int ln);
 void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);
