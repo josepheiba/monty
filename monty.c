@@ -35,6 +35,7 @@ int main(int argc, char **argv)
  * tokenize_and_continue - check code.
  * @stack : variable
  * @ln : variable
+ * @lifo : variable
  * Return: check declaration
  */
 
@@ -44,15 +45,18 @@ void tokenize_and_continue(stack_tt **stack, int ln, int *lifo)
 
 	token1 = strtok(line, " \n\t");
 
-	if (!strcmp(token1, "stack"))
+	if (token1 != NULL)
 	{
-		*lifo = 1;
-		return;
-	}
-	else if (!strcmp(token1, "queue"))
-	{
-		*lifo = 0;
-		return;
+		if (!strcmp(token1, "stack"))
+		{
+			*lifo = 1;
+			return;
+		}
+		else if (!strcmp(token1, "queue"))
+		{
+			*lifo = 0;
+			return;
+		}
 	}
 
 	if (token1 != NULL && token1[0] != '#')
@@ -62,6 +66,7 @@ void tokenize_and_continue(stack_tt **stack, int ln, int *lifo)
 /**
  * get_op_func - check code.
  * @s : variable
+ * @ln : variable
  * @line_number : variable
  * Return: check declaration
  */
