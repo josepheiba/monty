@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <string.h>
 
 /**
  * main - check code.
@@ -9,19 +10,19 @@
 
 int main(int argc, char **argv)
 {
-	int ln;
+	int ln, lifo;
 	FILE *fd;
 	size_t len = 0;
 	stack_tt *stack = NULL;
 
-	ln = 1;
+	ln = lifo = 1;
 	line = NULL;
 	argc_not_valid(argc);
 	file_open_fail(&fd, argv[1]);
 
 	while (getline(&line, &len, fd) != -1)
 	{
-		tokenize_and_continue(&stack, ln);
+		tokenize_and_continue(&stack, ln, &lifo);
 		ln++;
 	}
 	free(line);
@@ -37,14 +38,25 @@ int main(int argc, char **argv)
  * Return: check declaration
  */
 
-void tokenize_and_continue(stack_tt **stack, int ln)
+void tokenize_and_continue(stack_tt **stack, int ln, int *lifo)
 {
 	char *token1;
 
 	token1 = strtok(line, " \n\t");
 
+	if (!strcmp(token1, "stack"))
+	{
+		*lifo = 1;
+		return;
+	}
+	else if (!strcmp(token1, "queue"))
+	{
+		*lifo = 0;
+		return;
+	}
+
 	if (token1 != NULL && token1[0] != '#')
-		get_op_func(token1, ln)(stack, ln);
+		get_op_func(token1, ln, lifo)(stack, ln);
 }
 
 /**
@@ -54,7 +66,7 @@ void tokenize_and_continue(stack_tt **stack, int ln)
  * Return: check declaration
  */
 
-void (*get_op_func(char *s, int ln))(stack_tt **stack,
+void (*get_op_func(char *s, int ln, int *lifo))(stack_tt **stack,
 			unsigned int line_number)
 {
 	instruction_t ops[] = {
@@ -76,6 +88,11 @@ void (*get_op_func(char *s, int ln))(stack_tt **stack,
 		{"ok", nop}
 	};
 	int i;
+
+	if (*lifo == 0)
+	{
+		(ops + 0)->f = push2;
+	}
 
 	i = 0;
 	while (i < 15)

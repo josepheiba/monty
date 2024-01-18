@@ -47,6 +47,7 @@ int not_int(char *s);
 int argc_not_valid(int argc);
 int file_open_fail(FILE **fd, char *argv_one);
 void push(stack_tt **stack, unsigned int line_number);
+void push2(stack_tt **stack, unsigned int line_number);
 void pall(stack_tt **stack, unsigned int line_number);
 void pint(stack_tt **stack, unsigned int line_number);
 void pop(stack_tt **stack, unsigned int line_number);
@@ -61,8 +62,8 @@ void pstr(stack_tt **stack, unsigned int line_number);
 void rotl(stack_tt **stack, unsigned int line_number);
 void rotr(stack_tt **stack, unsigned int line_number);
 void nop(stack_tt **stack, unsigned int line_number);
-void tokenize_and_continue(stack_tt **books, int ln);
-void (*get_op_func(char *s, int ln))(stack_tt **stack, unsigned int l_n);
+void tokenize_and_continue(stack_tt **books, int ln, int *lifo);
+void (*get_op_func(char *s, int ln, int *lifo))(stack_tt **stack, unsigned int l_n);
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
